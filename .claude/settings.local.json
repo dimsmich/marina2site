@@ -4,7 +4,13 @@
       "Bash(copy \"C:\\Users\\Michael\\Downloads\\Marina.jpg\" imagesMarina.jpg)",
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git branch:*)",
+      "Bash(ssh:*)",
+      "Read(//c/Users/Michael/.ssh/**)"
     ],
     "deny": [],
     "ask": []
