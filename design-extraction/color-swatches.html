@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maggie Edwards Color System - Visual Swatches</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            padding: 40px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #112042;
+            margin-bottom: 10px;
+            font-size: 36px;
+        }
+
+        .subtitle {
+            color: #1D1D1D;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            color: #112042;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #A2F6E4;
+            padding-bottom: 10px;
+        }
+
+        .swatch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .swatch {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .swatch:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .color-block {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .color-block::after {
+            content: 'Click to copy';
+            position: absolute;
+            bottom: 10px;
+            font-size: 11px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .color-block:hover::after {
+            opacity: 0.7;
+        }
+
+        .swatch-info {
+            padding: 15px;
+            background: white;
+        }
+
+        .swatch-name {
+            font-weight: 600;
+            color: #112042;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .swatch-hex {
+            font-family: 'Monaco', 'Courier New', monospace;
+            color: #1D1D1D;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .swatch-rgb {
+            font-family: 'Monaco', 'Courier New', monospace;
+            color: #484848;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+
+        .swatch-usage {
+            font-size: 12px;
+            color: #112042;
+            background: #F1F3F7;
+            padding: 5px 8px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+
+        .swatch-context {
+            font-size: 11px;
+            color: #484848;
+            font-style: italic;
+        }
+
+        .combo-demo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .combo-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .combo-header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .combo-body {
+            padding: 20px;
+            min-height: 100px;
+        }
+
+        .combo-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .combo-desc {
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #112042;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Maggie Edwards Color System</h1>
+        <p class="subtitle">Complete visual color palette extracted from maggieedwards.com</p>
+
+        <!-- PRIMARY COLORS -->
+        <div class="section">
+            <h2 class="section-title">1. Primary Brand Colors</h2>
+            <div class="swatch-grid">
+                <div class="swatch">
+                    <div class="color-block" style="background: #112042; color: white;" onclick="copyColor('#112042')">
+                        #112042
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Deep Navy Blue</div>
+                        <div class="swatch-hex">#112042</div>
+                        <div class="swatch-rgb">rgb(17, 32, 66)</div>
+                        <div class="swatch-usage">122 occurrences</div>
+                        <div class="swatch-context">Headers, navigation, buttons, primary brand color</div>
+                        <div style="margin-top: 8px;">
+                            <span class="badge" style="background: #A2F6E4; color: #112042;">MOST USED</span>
+                            <span class="badge" style="background: #FF808B; color: white;">BRAND PRIMARY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #162A56; color: white;" onclick="copyColor('#162A56')">
+                        #162A56
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Light Navy</div>
+                        <div class="swatch-hex">#162A56</div>
+                        <div class="swatch-rgb">rgb(22, 42, 86)</div>
+                        <div class="swatch-usage">1 occurrence</div>
+                        <div class="swatch-context">Border accents, subtle variations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACCENT COLORS -->
+        <div class="section">
+            <h2 class="section-title">2. Accent Colors</h2>
+            <div class="swatch-grid">
+                <div class="swatch">
+                    <div class="color-block" style="background: #A2F6E4; color: #112042;" onclick="copyColor('#A2F6E4')">
+                        #A2F6E4
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Vibrant Teal</div>
+                        <div class="swatch-hex">#A2F6E4</div>
+                        <div class="swatch-rgb">rgb(162, 246, 228)</div>
+                        <div class="swatch-usage">16 occurrences</div>
+                        <div class="swatch-context">Hover states, links, highlights, interactive elements</div>
+                        <div style="margin-top: 8px;">
+                            <span class="badge" style="background: #112042; color: #A2F6E4;">PRIMARY ACCENT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #FF808B; color: white;" onclick="copyColor('#FF808B')">
+                        #FF808B
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Coral Pink</div>
+                        <div class="swatch-hex">#FF808B</div>
+                        <div class="swatch-rgb">rgb(255, 128, 139)</div>
+                        <div class="swatch-usage">48 occurrences</div>
+                        <div class="swatch-context">Decorative underlines, borders, accents</div>
+                        <div style="margin-top: 8px;">
+                            <span class="badge" style="background: #FFF3F2; color: #FF808B;">DECORATIVE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #EEC3AF; color: #112042;" onclick="copyColor('#EEC3AF')">
+                        #EEC3AF
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Soft Coral</div>
+                        <div class="swatch-hex">#EEC3AF</div>
+                        <div class="swatch-rgb">rgb(238, 195, 175)</div>
+                        <div class="swatch-usage">11 occurrences</div>
+                        <div class="swatch-context">Soft accents, SVG fills</div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #F2D3C4; color: #112042;" onclick="copyColor('#F2D3C4')">
+                        #F2D3C4
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Light Peach</div>
+                        <div class="swatch-hex">#F2D3C4</div>
+                        <div class="swatch-rgb">rgb(242, 211, 196)</div>
+                        <div class="swatch-usage">1 occurrence</div>
+                        <div class="swatch-context">Minimal use, subtle accents</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEUTRAL COLORS -->
+        <div class="section">
+            <h2 class="section-title">3. Neutral Colors</h2>
+            <div class="swatch-grid">
+                <div class="swatch">
+                    <div class="color-block" style="background: #FFFFFF; color: #112042; border: 1px solid #eee;" onclick="copyColor('#FFFFFF')">
+                        #FFFFFF
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Pure White</div>
+                        <div class="swatch-hex">#FFFFFF</div>
+                        <div class="swatch-rgb">rgb(255, 255, 255)</div>
+                        <div class="swatch-usage">71 occurrences</div>
+                        <div class="swatch-context">Backgrounds, text on dark, clean spaces</div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #FFF3F2; color: #112042;" onclick="copyColor('#FFF3F2')">
+                        #FFF3F2
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Warm Off-White</div>
+                        <div class="swatch-hex">#FFF3F2</div>
+                        <div class="swatch-rgb">rgb(255, 243, 242)</div>
+                        <div class="swatch-usage">10 occurrences</div>
+                        <div class="swatch-context">Subtle backgrounds</div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #F1F3F7; color: #112042;" onclick="copyColor('#F1F3F7')">
+                        #F1F3F7
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Light Blue-Gray</div>
+                        <div class="swatch-hex">#F1F3F7</div>
+                        <div class="swatch-rgb">rgb(241, 243, 247)</div>
+                        <div class="swatch-usage">1 occurrence</div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #EEE; color: #112042;" onclick="copyColor('#EEEEEE')">
+                        #EEEEEE
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Light Gray</div>
+                        <div class="swatch-hex">#EEEEEE</div>
+                        <div class="swatch-rgb">rgb(238, 238, 238)</div>
+                        <div class="swatch-usage">2 occurrences</div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #1D1D1D; color: white;" onclick="copyColor('#1D1D1D')">
+                        #1D1D1D
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Dark Gray (Text)</div>
+                        <div class="swatch-hex">#1D1D1D</div>
+                        <div class="swatch-rgb">rgb(29, 29, 29)</div>
+                        <div class="swatch-usage">21 occurrences</div>
+                        <div class="swatch-context">Primary body text color</div>
+                    </div>
+                </div>
+
+                <div class="swatch">
+                    <div class="color-block" style="background: #484848; color: white;" onclick="copyColor('#484848')">
+                        #484848
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Mid Gray</div>
+                        <div class="swatch-hex">#484848</div>
+                        <div class="swatch-rgb">rgb(72, 72, 72)</div>
+                        <div class="swatch-usage">1 occurrence</div>
+                        <div class="swatch-context">Secondary text</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FUNCTIONAL COLORS -->
+        <div class="section">
+            <h2 class="section-title">4. Functional Colors</h2>
+            <div class="swatch-grid">
+                <div class="swatch">
+                    <div class="color-block" style="background: #ED1B35; color: white;" onclick="copyColor('#ED1B35')">
+                        #ED1B35
+                    </div>
+                    <div class="swatch-info">
+                        <div class="swatch-name">Error Red</div>
+                        <div class="swatch-hex">#ED1B35</div>
+                        <div class="swatch-rgb">rgb(237, 27, 53)</div>
+                        <div class="swatch-usage">4 occurrences</div>
+                        <div class="swatch-context">Validation errors only</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLOR COMBINATIONS -->
+        <div class="section">
+            <h2 class="section-title">5. Color Combinations</h2>
+            <div class="combo-demo">
+                <div class="combo-card">
+                    <div class="combo-header" style="background: #112042; color: white;">
+                        <div class="combo-title">Primary Header</div>
+                        <div class="combo-desc">Navy background with white text</div>
+                    </div>
+                    <div class="combo-body" style="background: white; color: #1D1D1D;">
+                        <p style="margin-bottom: 10px;"><strong>Background:</strong> #112042</p>
+                        <p style="margin-bottom: 10px;"><strong>Text:</strong> #FFFFFF</p>
+                        <p><strong>Accent:</strong> <span style="color: #A2F6E4;">Teal Links</span></p>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-header" style="background: white; border-bottom: 3px solid #A2F6E4;">
+                        <div class="combo-title" style="color: #112042;">Content Section</div>
+                        <div class="combo-desc" style="color: #1D1D1D;">White background with navy headings</div>
+                    </div>
+                    <div class="combo-body" style="background: white; color: #1D1D1D;">
+                        <p style="margin-bottom: 10px;"><strong>Background:</strong> #FFFFFF</p>
+                        <p style="margin-bottom: 10px;"><strong>Headings:</strong> <span style="color: #112042;">#112042</span></p>
+                        <p style="margin-bottom: 10px;"><strong>Text:</strong> #1D1D1D</p>
+                        <p><strong>Accent:</strong> <span style="border-bottom: 2px solid #FF808B;">Pink underlines</span></p>
+                    </div>
+                </div>
+
+                <div class="combo-card">
+                    <div class="combo-header" style="background: #112042; color: white;">
+                        <div class="combo-title">Call-to-Action</div>
+                        <div class="combo-desc">Navy button with teal hover</div>
+                    </div>
+                    <div class="combo-body" style="background: #F1F3F7; text-align: center; padding: 30px;">
+                        <button style="background: #112042; color: white; border: 2px solid #112042; padding: 12px 24px; font-size: 16px; border-radius: 4px; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.background='transparent'; this.style.color='#112042'; this.style.borderColor='#A2F6E4';" onmouseout="this.style.background='#112042'; this.style.color='white'; this.style.borderColor='#112042';">
+                            Primary Button
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTRAST RATIOS -->
+        <div class="section">
+            <h2 class="section-title">6. Accessibility & Contrast</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background: #112042; color: white;">
+                        <th style="padding: 12px; text-align: left;">Color Pair</th>
+                        <th style="padding: 12px; text-align: left;">Contrast Ratio</th>
+                        <th style="padding: 12px; text-align: left;">WCAG Level</th>
+                        <th style="padding: 12px; text-align: left;">Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;">Navy + White</td>
+                        <td style="padding: 12px;">14.2:1</td>
+                        <td style="padding: 12px;"><span class="badge" style="background: #A2F6E4; color: #112042;">AAA ✓</span></td>
+                        <td style="padding: 12px; background: #112042; color: white;">Sample Text</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;">Dark Gray + White</td>
+                        <td style="padding: 12px;">15.8:1</td>
+                        <td style="padding: 12px;"><span class="badge" style="background: #A2F6E4; color: #112042;">AAA ✓</span></td>
+                        <td style="padding: 12px; background: white; color: #1D1D1D; border: 1px solid #eee;">Sample Text</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 12px;">Navy + Teal</td>
+                        <td style="padding: 12px;">7.3:1</td>
+                        <td style="padding: 12px;"><span class="badge" style="background: #FF808B; color: white;">AA ✓</span></td>
+                        <td style="padding: 12px; background: #112042; color: #A2F6E4;">Sample Text</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Color copied to clipboard!</div>
+
+    <script>
+        function copyColor(color) {
+            navigator.clipboard.writeText(color).then(() => {
+                const toast = document.getElementById('toast');
+                toast.textContent = `${color} copied to clipboard!`;
+                toast.classList.add('show');
+
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

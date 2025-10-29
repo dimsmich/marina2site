@@ -1,0 +1,738 @@
+{
+  "extraction_date": "2025-10-26T20:30:50.774Z",
+  "source": "https://maggieedwards.com/",
+  "total_colors": 16,
+  "categorized": {
+    "blue-dark": [
+      {
+        "hex": "#112042",
+        "rgb": {
+          "r": 17,
+          "g": 32,
+          "b": 66
+        },
+        "contexts": [
+          "background-color",
+          "color",
+          "transition",
+          "transform",
+          "height",
+          "fill-color",
+          "caret-color",
+          "border-bottom",
+          "border",
+          "border-color"
+        ],
+        "usageCount": 122
+      },
+      {
+        "hex": "#162A56",
+        "rgb": {
+          "r": 22,
+          "g": 42,
+          "b": 86
+        },
+        "contexts": [
+          "border-bottom"
+        ],
+        "usageCount": 1
+      }
+    ],
+    "accent-coral": [
+      {
+        "hex": "#EEC3AF",
+        "rgb": {
+          "r": 238,
+          "g": 195,
+          "b": 175
+        },
+        "contexts": [
+          "fill",
+          "border-bottom",
+          "color",
+          "margin-top",
+          "letter-spacing",
+          "transition"
+        ],
+        "usageCount": 11
+      },
+      {
+        "hex": "#F2D3C4",
+        "rgb": {
+          "r": 242,
+          "g": 211,
+          "b": 196
+        },
+        "contexts": [
+          "color"
+        ],
+        "usageCount": 1
+      }
+    ],
+    "neutral-white": [
+      {
+        "hex": "#FFF",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "contexts": [
+          "color",
+          "fill",
+          "height",
+          "text-transform",
+          "transition",
+          "background-color",
+          "width",
+          "right",
+          "padding-left",
+          "opacity"
+        ],
+        "usageCount": 71
+      },
+      {
+        "hex": "#FFF3F2",
+        "rgb": {
+          "r": 255,
+          "g": 243,
+          "b": 242
+        },
+        "contexts": [
+          "text-transform",
+          "background-color",
+          "transition",
+          "height",
+          "color"
+        ],
+        "usageCount": 10
+      },
+      {
+        "hex": "#EEE",
+        "rgb": {
+          "r": 238,
+          "g": 238,
+          "b": 238
+        },
+        "contexts": [
+          "border",
+          "border-color"
+        ],
+        "usageCount": 2
+      },
+      {
+        "hex": "#F7FCFE",
+        "rgb": {
+          "r": 247,
+          "g": 252,
+          "b": 254
+        },
+        "contexts": [
+          "transition"
+        ],
+        "usageCount": 1
+      },
+      {
+        "hex": "#F5F5F5",
+        "rgb": {
+          "r": 245,
+          "g": 245,
+          "b": 245
+        },
+        "contexts": [
+          "padding"
+        ],
+        "usageCount": 1
+      },
+      {
+        "hex": "#F6F6F6",
+        "rgb": {
+          "r": 246,
+          "g": 246,
+          "b": 246
+        },
+        "contexts": [
+          "animation"
+        ],
+        "usageCount": 1
+      },
+      {
+        "hex": "#F1F3F7",
+        "rgb": {
+          "r": 241,
+          "g": 243,
+          "b": 247
+        },
+        "contexts": [
+          "color"
+        ],
+        "usageCount": 1
+      }
+    ],
+    "teal-light": [
+      {
+        "hex": "#A2F6E4",
+        "rgb": {
+          "r": 162,
+          "g": 246,
+          "b": 228
+        },
+        "contexts": [
+          "color",
+          "background-color",
+          "line-height",
+          "z-index",
+          "border-bottom",
+          "padding-bottom",
+          "border-color",
+          "transition"
+        ],
+        "usageCount": 16
+      }
+    ],
+    "neutral-gray-dark": [
+      {
+        "hex": "#1D1D1D",
+        "rgb": {
+          "r": 29,
+          "g": 29,
+          "b": 29
+        },
+        "contexts": [
+          "color",
+          "font-smoothing",
+          "text-align"
+        ],
+        "usageCount": 21
+      },
+      {
+        "hex": "#484848",
+        "rgb": {
+          "r": 72,
+          "g": 72,
+          "b": 72
+        },
+        "contexts": [
+          "color"
+        ],
+        "usageCount": 1
+      }
+    ],
+    "accent-red": [
+      {
+        "hex": "#FF808B",
+        "rgb": {
+          "r": 255,
+          "g": 128,
+          "b": 139
+        },
+        "contexts": [
+          "background-color",
+          "border-bottom",
+          "color",
+          "fill",
+          "transform",
+          "margin",
+          "margin-bottom",
+          "display",
+          "transition"
+        ],
+        "usageCount": 48
+      },
+      {
+        "hex": "#ED1B35",
+        "rgb": {
+          "r": 237,
+          "g": 27,
+          "b": 53
+        },
+        "contexts": [
+          "color"
+        ],
+        "usageCount": 4
+      }
+    ]
+  },
+  "top_colors": [
+    {
+      "hex": "#112042",
+      "rgb": {
+        "r": 17,
+        "g": 32,
+        "b": 66
+      },
+      "contexts": [
+        "background-color",
+        "color",
+        "transition",
+        "transform",
+        "height",
+        "fill-color",
+        "caret-color",
+        "border-bottom",
+        "border",
+        "border-color"
+      ],
+      "usageCount": 122
+    },
+    {
+      "hex": "#FFF",
+      "rgb": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "contexts": [
+        "color",
+        "fill",
+        "height",
+        "text-transform",
+        "transition",
+        "background-color",
+        "width",
+        "right",
+        "padding-left",
+        "opacity"
+      ],
+      "usageCount": 71
+    },
+    {
+      "hex": "#FF808B",
+      "rgb": {
+        "r": 255,
+        "g": 128,
+        "b": 139
+      },
+      "contexts": [
+        "background-color",
+        "border-bottom",
+        "color",
+        "fill",
+        "transform",
+        "margin",
+        "margin-bottom",
+        "display",
+        "transition"
+      ],
+      "usageCount": 48
+    },
+    {
+      "hex": "#1D1D1D",
+      "rgb": {
+        "r": 29,
+        "g": 29,
+        "b": 29
+      },
+      "contexts": [
+        "color",
+        "font-smoothing",
+        "text-align"
+      ],
+      "usageCount": 21
+    },
+    {
+      "hex": "#A2F6E4",
+      "rgb": {
+        "r": 162,
+        "g": 246,
+        "b": 228
+      },
+      "contexts": [
+        "color",
+        "background-color",
+        "line-height",
+        "z-index",
+        "border-bottom",
+        "padding-bottom",
+        "border-color",
+        "transition"
+      ],
+      "usageCount": 16
+    },
+    {
+      "hex": "#EEC3AF",
+      "rgb": {
+        "r": 238,
+        "g": 195,
+        "b": 175
+      },
+      "contexts": [
+        "fill",
+        "border-bottom",
+        "color",
+        "margin-top",
+        "letter-spacing",
+        "transition"
+      ],
+      "usageCount": 11
+    },
+    {
+      "hex": "#FFF3F2",
+      "rgb": {
+        "r": 255,
+        "g": 243,
+        "b": 242
+      },
+      "contexts": [
+        "text-transform",
+        "background-color",
+        "transition",
+        "height",
+        "color"
+      ],
+      "usageCount": 10
+    },
+    {
+      "hex": "#ED1B35",
+      "rgb": {
+        "r": 237,
+        "g": 27,
+        "b": 53
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 4
+    },
+    {
+      "hex": "#EEE",
+      "rgb": {
+        "r": 238,
+        "g": 238,
+        "b": 238
+      },
+      "contexts": [
+        "border",
+        "border-color"
+      ],
+      "usageCount": 2
+    },
+    {
+      "hex": "#162A56",
+      "rgb": {
+        "r": 22,
+        "g": 42,
+        "b": 86
+      },
+      "contexts": [
+        "border-bottom"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F2D3C4",
+      "rgb": {
+        "r": 242,
+        "g": 211,
+        "b": 196
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F7FCFE",
+      "rgb": {
+        "r": 247,
+        "g": 252,
+        "b": 254
+      },
+      "contexts": [
+        "transition"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F5F5F5",
+      "rgb": {
+        "r": 245,
+        "g": 245,
+        "b": 245
+      },
+      "contexts": [
+        "padding"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F6F6F6",
+      "rgb": {
+        "r": 246,
+        "g": 246,
+        "b": 246
+      },
+      "contexts": [
+        "animation"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F1F3F7",
+      "rgb": {
+        "r": 241,
+        "g": 243,
+        "b": 247
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#484848",
+      "rgb": {
+        "r": 72,
+        "g": 72,
+        "b": 72
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 1
+    }
+  ],
+  "blues": [
+    {
+      "hex": "#112042",
+      "rgb": {
+        "r": 17,
+        "g": 32,
+        "b": 66
+      },
+      "contexts": [
+        "background-color",
+        "color",
+        "transition",
+        "transform",
+        "height",
+        "fill-color",
+        "caret-color",
+        "border-bottom",
+        "border",
+        "border-color"
+      ],
+      "usageCount": 122
+    },
+    {
+      "hex": "#162A56",
+      "rgb": {
+        "r": 22,
+        "g": 42,
+        "b": 86
+      },
+      "contexts": [
+        "border-bottom"
+      ],
+      "usageCount": 1
+    }
+  ],
+  "neutrals": [
+    {
+      "hex": "#FFF",
+      "rgb": {
+        "r": 255,
+        "g": 255,
+        "b": 255
+      },
+      "contexts": [
+        "color",
+        "fill",
+        "height",
+        "text-transform",
+        "transition",
+        "background-color",
+        "width",
+        "right",
+        "padding-left",
+        "opacity"
+      ],
+      "usageCount": 71
+    },
+    {
+      "hex": "#1D1D1D",
+      "rgb": {
+        "r": 29,
+        "g": 29,
+        "b": 29
+      },
+      "contexts": [
+        "color",
+        "font-smoothing",
+        "text-align"
+      ],
+      "usageCount": 21
+    },
+    {
+      "hex": "#FFF3F2",
+      "rgb": {
+        "r": 255,
+        "g": 243,
+        "b": 242
+      },
+      "contexts": [
+        "text-transform",
+        "background-color",
+        "transition",
+        "height",
+        "color"
+      ],
+      "usageCount": 10
+    },
+    {
+      "hex": "#EEE",
+      "rgb": {
+        "r": 238,
+        "g": 238,
+        "b": 238
+      },
+      "contexts": [
+        "border",
+        "border-color"
+      ],
+      "usageCount": 2
+    },
+    {
+      "hex": "#F7FCFE",
+      "rgb": {
+        "r": 247,
+        "g": 252,
+        "b": 254
+      },
+      "contexts": [
+        "transition"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#484848",
+      "rgb": {
+        "r": 72,
+        "g": 72,
+        "b": 72
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F5F5F5",
+      "rgb": {
+        "r": 245,
+        "g": 245,
+        "b": 245
+      },
+      "contexts": [
+        "padding"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F6F6F6",
+      "rgb": {
+        "r": 246,
+        "g": 246,
+        "b": 246
+      },
+      "contexts": [
+        "animation"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#F1F3F7",
+      "rgb": {
+        "r": 241,
+        "g": 243,
+        "b": 247
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 1
+    }
+  ],
+  "accents": [
+    {
+      "hex": "#F2D3C4",
+      "rgb": {
+        "r": 242,
+        "g": 211,
+        "b": 196
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 1
+    },
+    {
+      "hex": "#A2F6E4",
+      "rgb": {
+        "r": 162,
+        "g": 246,
+        "b": 228
+      },
+      "contexts": [
+        "color",
+        "background-color",
+        "line-height",
+        "z-index",
+        "border-bottom",
+        "padding-bottom",
+        "border-color",
+        "transition"
+      ],
+      "usageCount": 16
+    },
+    {
+      "hex": "#FF808B",
+      "rgb": {
+        "r": 255,
+        "g": 128,
+        "b": 139
+      },
+      "contexts": [
+        "background-color",
+        "border-bottom",
+        "color",
+        "fill",
+        "transform",
+        "margin",
+        "margin-bottom",
+        "display",
+        "transition"
+      ],
+      "usageCount": 48
+    },
+    {
+      "hex": "#ED1B35",
+      "rgb": {
+        "r": 237,
+        "g": 27,
+        "b": 53
+      },
+      "contexts": [
+        "color"
+      ],
+      "usageCount": 4
+    },
+    {
+      "hex": "#EEC3AF",
+      "rgb": {
+        "r": 238,
+        "g": 195,
+        "b": 175
+      },
+      "contexts": [
+        "fill",
+        "border-bottom",
+        "color",
+        "margin-top",
+        "letter-spacing",
+        "transition"
+      ],
+      "usageCount": 11
+    }
+  ]
+}

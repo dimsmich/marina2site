@@ -1,0 +1,12 @@
+{
+  "name": "design-color-extractor",
+  "version": "1.0.0",
+  "description": "Extract color system from maggieedwards.com",
+  "main": "extract-colors.js",
+  "scripts": {
+    "extract": "node extract-colors.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.6.1"
+  }
+}
