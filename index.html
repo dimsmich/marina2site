@@ -971,6 +971,49 @@
             position: relative;
         }
 
+        /* Badge Styles */
+        .badge {
+            background: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 18px;
+        }
+
+        /* Utility Classes */
+        .flex {
+            display: flex;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .gap-4 {
+            gap: 16px;
+        }
+
+        .mb-6 {
+            margin-bottom: 24px;
+        }
+
+        .w-5 {
+            width: 20px;
+        }
+
+        .h-5 {
+            height: 20px;
+        }
+
+        .text-copper {
+            color: var(--bronze);
+        }
+
         /* Testimonials */
         .testimonial {
             display: flex;
@@ -2068,7 +2111,7 @@
         <div class="nav-container">
             <a href="/" class="logo">MARINA DIMSHITS</a>
             <div class="nav-links">
-                <a href="#about" class="nav-link">О программе</a>
+                <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#instructor" class="nav-link">О ведущей</a>
                 <a href="#testimonials" class="nav-link">Отзывы</a>
                 <a href="#join" class="btn btn-primary">Участвовать</a>
@@ -2168,11 +2211,12 @@
     -->
 
     <!-- HERO TITLE -->
-    <section id="main-content" class="section section-light" role="main" aria-label="Главная страница программы Проживание Рун" style="padding: var(--s-20) 0; text-align: center;">
+    <section id="main-content" class="section section-light" role="main" aria-label="Главная страница программы Проживание Рун" style="padding: var(--s-20) 0; text-align: center; background-image: url('images/lab-background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; min-height: 600px; display: flex; align-items: center; justify-content: center;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
         <span class="feedback-section-badge">1</span>
-        <div class="container max-w-prose">
-            <h1 style="font-family: 'Century Gothic', sans-serif; font-size: 4em; font-weight: 700; color: #111111; margin-bottom: var(--s-3); line-height: 1.2;">Sacred Lab</h1>
-            <p style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; font-weight: 400; color: var(--text-gray); margin: 0;">Проживание Рун</p>
+        <div class="container max-w-prose" style="position: relative; z-index: 2;">
+            <h1 style="font-family: 'Century Gothic', sans-serif; font-size: 4em; font-weight: 700; color: #ffffff; margin-bottom: var(--s-3); line-height: 1.2; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">Sacred Lab</h1>
+            <p style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; font-weight: 400; color: #ffffff; margin: 0; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">Проживание Рун</p>
         </div>
     </section>
 
@@ -2196,35 +2240,41 @@
         </div>
     </section>
 
-    <!-- HOW RUNES WORK -->
-    <section class="section section-light">
+     <!-- HOW RUNES WORK - INTRO -->
+     <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background-color: #1A2F5A; color: #ffffff;">
         <span class="feedback-section-badge">3</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Как работает система</h2>
-            <p class="text-large text-center" style="margin-bottom: var(--s-6);">
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #ffffff;">Как работает система</h2>
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-6); color: #ffffff;">
                 Руны действуют НЕ на уровне веры.<br>
                 Они запускают <strong>процессы нейропластичности</strong>, синхронизируют мышление, тело и волю. Это древняя нейротехнология, встроенная в человеческое сознание.
             </p>
+        </div>
+    </section>
 
+    <!-- HOW RUNES WORK - DETAILS -->
+    <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background-color: #ffffff;">
+        <span class="feedback-section-badge">3A</span>
+        <div class="container max-w-prose">
             <div style="margin-top: var(--s-8);">
-                <h3 style="color: var(--accent); font-size: 1.5em; margin-bottom: var(--s-2);">Сознание.</h3>
-                <p style="margin-bottom: var(--s-4);">
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Сознание.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #111111;">
                     Новые нейронные связи, новая архитектура мышления.<br>
                     Ты начинаешь видеть себя и реальность иначе.
                 </p>
 
-                <h3 style="color: var(--accent); font-size: 1.5em; margin-bottom: var(--s-2);">Энергия.</h3>
-                <p style="margin-bottom: var(--s-4);">
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Энергия.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #111111;">
                     Внутренние фрагменты собираются в целое: возвращается сила, появляется поток, снижается тревожность.
                 </p>
 
-                <h3 style="color: var(--accent); font-size: 1.5em; margin-bottom: var(--s-2);">Тело.</h3>
-                <p style="margin-bottom: var(--s-4);">
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Тело.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #111111;">
                     Психика и биохимия выравниваются. Меняется походка, осанка, дыхание, а значит и твое поведение, твои стратегии и реакции.
                 </p>
 
-                <h3 style="color: var(--accent); font-size: 1.5em; margin-bottom: var(--s-2);">Судьба.</h3>
-                <p>
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Судьба.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; color: #111111;">
                     Жизненные сценарии перестраиваются. Ты больше не идёшь по кругу, ты создаёшь направление.
                 </p>
             </div>
@@ -2232,19 +2282,19 @@
     </section>
 
     <!-- WHY RUNES -->
-    <section class="section section-gray" style="font-family: 'Century Gothic', sans-serif;">
+    <section class="section section-gray" style="font-family: 'Century Gothic', sans-serif; background: #1A2F5A;">
         <span class="feedback-section-badge">4</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Почему именно руны</h2>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #FFFFFF;">Почему именно руны</h2>
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
                 Потому что это не религия и не мифология.<br>
                 Это язык взаимодействия человека с законами бытия.
             </p>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
                 Каждая руна отражает этап эволюции сознания:<br>
                 от первичной воли до просветлённой ясности.
             </p>
-            <p class="text-center" style="margin-top: 40px; font-family: 'Century Gothic', sans-serif;">
+            <p class="text-center" style="margin-top: 40px; font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
                 <strong>Руны - не о гадании.</strong><br>
                 Руны о том, <strong>кем ты становишься, кем ты выбираешь быть.</strong>
             </p>
@@ -2277,16 +2327,16 @@
 
             <div class="instructor-grid">
                 <div class="instructor-image">
-                    <img src="images/Marina_pic.jpg" alt="Марина Димшиц">
+                    <img src="images/marina_pic3.jpg" alt="Марина Димшиц" style="width: 100%; height: auto; object-fit: contain;">
                 </div>
 
                 <div>
                     <h3>Марина Димшиц</h3>
                     <p style="color: var(--text-gray); font-size: 18px; margin-bottom: 24px;">
-                        Mental Health Coach, исследователь сознания
+                        <strong>Health Coach, исследователь сознания</strong>
                     </p>
 
-                    <p>Выпускница программ Harvard Medical School, Yale и NYU, соединяет нейронауку, психологию и сакральные традиции.</p>
+                    <p>Выпускница программ <strong>Medical School, Yale</strong> и <strong>NYU</strong>, соединяет нейронауку, психологию и сакральные традиции.</p>
 
                     <p>Создатель авторских практик, прошедших более 1000 человек в 20+ странах. Её методика основана на точности науки и глубине символа.</p>
 
@@ -2294,10 +2344,24 @@
                         «Руны - это не магия. Это древняя нейросеть. Когда ты их проживаешь, твой мозг и тело переписывают старые алгоритмы жизни.»
                     </div>
 
-                    <div class="credentials">
-                        <span class="credential">Harvard Medical School</span>
-                        <span class="credential">Yale University</span>
-                        <span class="credential">NYU</span>
+                    <!-- Credential Badges - Horizontal -->
+                    <div class="flex flex-wrap gap-4 mb-6">
+                        <div class="badge">
+                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                            Harvard Medical School
+                        </div>
+                        <div class="badge">
+                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
+                            Yale University
+                        </div>
+                        <div class="badge">
+                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
+                            1,000+ Clients
+                        </div>
+                        <div class="badge">
+                            <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+                            6+ Years Experience
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2305,34 +2369,34 @@
     </section>
 
     <!-- WHAT YOU GET -->
-    <section class="section section-light" style="font-family: 'Century Gothic', sans-serif;">
+    <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background: #1A2F5A;">
         <span class="feedback-section-badge">7</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Что ты получишь</h2>
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #FFFFFF;">Что ты получишь</h2>
 
             <div style="margin-top: var(--s-8);">
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4);">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
                     • 24 архетипических состояния, по одной Руне в неделю.
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4);">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
                     • Голосовые медитации и нейропрактики для тела и сознания.
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4);">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
                     • Минимум времени, максимум трансформации: всего <strong>15 минут в неделю.</strong>
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4);">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
                     • Поддержка, сопровождение и глубинная структура процесса.
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-6);">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-6); color: #FFFFFF;">
                     • Изменение восприятия себя, энергии и реальности.
                 </p>
 
-                <h3 style="color: var(--accent); font-size: 1.8em; margin-top: var(--s-8); margin-bottom: var(--s-3); font-family: 'Century Gothic', sans-serif; text-align: center;">Результат</h3>
-                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+                <h3 style="color: #9B552B; font-size: 1.8em; margin-top: var(--s-8); margin-bottom: var(--s-3); font-family: 'Century Gothic', sans-serif; text-align: center;">Результат</h3>
+                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
                     Ты больше не ищешь ответы, ты становишься ими.<br>
                     Ты перестаёшь «работать над собой», ты начинаешь <strong>жить собой.</strong>
                 </p>
-                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; margin-top: var(--s-3);">
+                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; margin-top: var(--s-3); color: #FFFFFF;">
                     Ты обретаешь внутренний стержень, уверенность и ясность, которую не забирают внешние обстоятельства.
                 </p>
             </div>
@@ -2414,40 +2478,40 @@
     </section>
 
     <!-- DETAILS -->
-    <section class="section section-gray">
+    <section id="faq" class="section section-gray" style="font-family: 'Century Gothic', sans-serif;">
         <span class="feedback-section-badge">10</span>
         <div class="container">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Формат и детали</h2>
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">FAQ</h2>
 
             <div class="grid grid-3" style="margin-top: 80px;">
                 <div class="detail-card">
-                    <h3 class="detail-label">Продолжительность</h3>
-                    <p>6 месяцев</p>
+                    <h3 class="detail-label" style="font-family: 'Century Gothic', sans-serif;">Продолжительность</h3>
+                    <p style="font-family: 'Century Gothic', sans-serif;">6 месяцев</p>
                 </div>
 
                 <div class="detail-card">
-                    <h3 class="detail-label">Формат</h3>
-                    <p>Онлайн, в телеграмм-канале с удобной навигацией</p>
+                    <h3 class="detail-label" style="font-family: 'Century Gothic', sans-serif;">Формат</h3>
+                    <p style="font-family: 'Century Gothic', sans-serif;">Онлайн, в телеграмм-канале с удобной навигацией</p>
                 </div>
 
                 <div class="detail-card">
-                    <h3 class="detail-label">Ритм</h3>
-                    <p>1 руна = 1 неделя = 15 минут практики</p>
+                    <h3 class="detail-label" style="font-family: 'Century Gothic', sans-serif;">Ритм</h3>
+                    <p style="font-family: 'Century Gothic', sans-serif;">1 руна = 1 неделя = 15 минут практики</p>
                 </div>
 
                 <div class="detail-card">
-                    <h3 class="detail-label">Инструменты</h3>
-                    <p>Голосовые нейропрактики, задания на проживание, сопровождение в Telegram</p>
+                    <h3 class="detail-label" style="font-family: 'Century Gothic', sans-serif;">Инструменты</h3>
+                    <p style="font-family: 'Century Gothic', sans-serif;">Голосовые нейропрактики, задания на проживание, сопровождение в Telegram</p>
                 </div>
 
                 <div class="detail-card">
-                    <h3 class="detail-label">Старт</h3>
-                    <p>10 ноября</p>
+                    <h3 class="detail-label" style="font-family: 'Century Gothic', sans-serif;">Старт</h3>
+                    <p style="font-family: 'Century Gothic', sans-serif;">10 ноября</p>
                 </div>
 
                 <div class="detail-card">
-                    <h3 class="detail-label">Подходит</h3>
-                    <p>Для проживания в собственном ритме, без зависимости от времени и места</p>
+                    <h3 class="detail-label" style="font-family: 'Century Gothic', sans-serif;">Подходит</h3>
+                    <p style="font-family: 'Century Gothic', sans-serif;">Для проживания в собственном ритме, без зависимости от времени и места</p>
                 </div>
             </div>
         </div>
@@ -2467,17 +2531,17 @@
     </section> -->
 
     <!-- CTA -->
-    <section id="join" class="section section-accent" style="padding: var(--s-20) 0;">
+    <section id="join" class="section section-accent" style="padding: var(--s-20) 0; font-family: 'Century Gothic', sans-serif; background: #9B552B;">
         <span class="feedback-section-badge">11</span>
         <div class="container text-center max-w-prose" style="position: relative; z-index: 1;">
             <h2 style="margin-bottom: var(--s-8); font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Готова войти в Сакральную Лабораторию?</h2>
-            <p class="text-large" style="margin-bottom: var(--s-4); max-width: 600px; margin-left: auto; margin-right: auto;">
+            <p class="text-large" style="margin-bottom: var(--s-4); max-width: 600px; margin-left: auto; margin-right: auto; font-family: 'Century Gothic', sans-serif;">
                 Полгода, 24 руны, полный цикл и одно решение.
             </p>
-            <p style="margin-bottom: var(--s-10); font-size: 20px; opacity: 0.95;">
+            <p style="margin-bottom: var(--s-10); font-size: 20px; opacity: 0.95; font-family: 'Century Gothic', sans-serif;">
                 С этого шага начинается твоя новая жизнь.
             </p>
-            <a href="#" class="btn btn-primary btn-lg btn-magnetic btn-ripple" style="padding: var(--s-4) var(--s-10); font-size: 18px;" aria-label="Принять участие в программе Проживание Рун - зарегистрироваться сейчас">Принять участие</a>
+            <a href="#" class="btn btn-primary btn-lg btn-magnetic btn-ripple" style="padding: var(--s-4) var(--s-10); font-size: 18px; font-family: 'Century Gothic', sans-serif; color: #9B552B;" aria-label="Принять участие в программе Проживание Рун - зарегистрироваться сейчас">Принять участие</a>
         </div>
     </section>
 
@@ -2818,7 +2882,7 @@
                 <div>
                     <h3>Навигация</h3>
                     <div class="footer-links">
-                        <a href="#about" class="footer-link">О программе</a>
+                        <!-- <a href="#about" class="footer-link">О программе</a> -->
                         <a href="#instructor" class="footer-link">О ведущей</a>
                         <a href="#testimonials" class="footer-link">Отзывы</a>
                         <a href="#join" class="footer-link">Участвовать</a>
@@ -2844,7 +2908,7 @@
 
     <!-- STICKY CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#join" class="btn btn-accent btn-lg">Начать трансформацию</a>
+        <a href="#join" class="btn btn-accent btn-lg">Принять участие</a>
     </div>
 
     <script>
