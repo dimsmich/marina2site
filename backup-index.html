@@ -251,39 +251,6 @@
             color: var(--primary);
         }
 
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-            z-index: 1001;
-        }
-
-        .mobile-menu-toggle span {
-            display: block;
-            width: 28px;
-            height: 3px;
-            background: var(--primary);
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-
-        .mobile-menu-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(9px, 9px);
-        }
-
-        .mobile-menu-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .mobile-menu-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(9px, -9px);
-        }
-
         /* Buttons - 2025 UX Standards */
         .btn {
             display: inline-flex;
@@ -1871,33 +1838,8 @@
 
         /* Mobile */
         @media (max-width: 768px) {
-            .nav-container {
-                flex-wrap: wrap;
-                padding: var(--s-2) var(--s-4);
-            }
-
-            .mobile-menu-toggle {
-                display: flex;
-            }
-
             .nav-links {
                 display: none;
-                flex-direction: column;
-                gap: var(--s-2);
-                width: 100%;
-                align-items: center;
-                padding: var(--s-4) 0;
-                background: rgba(255, 255, 255, 0.98);
-                border-top: 1px solid var(--border);
-                margin-top: var(--s-2);
-            }
-
-            .nav-links.mobile-menu-open {
-                display: flex;
-            }
-
-            .nav-link {
-                font-size: 14px;
             }
 
             .hero {
@@ -2168,12 +2110,7 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="logo">MARINA DIMSHITS</a>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links" id="navLinks">
+            <div class="nav-links">
                 <a href="#faq" class="nav-link">FAQ</a>
                 <a href="#instructor" class="nav-link">О ведущей</a>
                 <a href="#testimonials" class="nav-link">Отзывы</a>
@@ -2938,6 +2875,7 @@
                     <h3>MARINA DIMSHITS</h3>
                     <p style="opacity: 0.8; line-height: 1.7;">
                         Mental Health Coach<br>
+                        Исследователь сознания
                     </p>
                 </div>
 
@@ -2970,31 +2908,11 @@
 
     <!-- STICKY CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#join" class="btn btn-accent btn-lg" style="background: #9B552B;">Принять участие</a>
+        <a href="#join" class="btn btn-accent btn-lg">Принять участие</a>
     </div>
 
     <script>
         // ===== 2025 LUXURY INTERACTIVE ENHANCEMENTS =====
-
-        // ========== MOBILE MENU TOGGLE ==========
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navLinks.classList.toggle('mobile-menu-open');
-            });
-
-            // Close menu when clicking on a link
-            const navLinksItems = navLinks.querySelectorAll('a');
-            navLinksItems.forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenuToggle.classList.remove('active');
-                    navLinks.classList.remove('mobile-menu-open');
-                });
-            });
-        }
 
         // ========== CUSTOM CURSOR ==========
         const customCursor = document.getElementById('customCursor');
