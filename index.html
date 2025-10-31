@@ -1263,6 +1263,12 @@
             pointer-events: all;
         }
 
+        .sticky-cta.hide-on-section {
+            opacity: 0;
+            transform: translateY(100px);
+            pointer-events: none;
+        }
+
         .sticky-cta .btn {
             box-shadow: 0 8px 32px rgba(219, 68, 55, 0.4);
             animation: pulse 2s infinite;
@@ -1701,56 +1707,18 @@
             transform: rotate(45deg);
         }
 
-        /* Custom Cursor - Refined Luxury */
+        /* Custom Cursor - DISABLED */
         .custom-cursor {
-            width: 32px;
-            height: 32px;
-            border: 1.5px solid rgba(212, 175, 55, 0.6);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            mix-blend-mode: screen;
-            opacity: 0;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
-
-        .custom-cursor.active {
-            opacity: 0.8;
-        }
-
-        .custom-cursor.hover {
-            width: 48px;
-            height: 48px;
-            background: rgba(212, 175, 55, 0.08);
-            border-width: 2px;
-            border-color: rgba(212, 175, 55, 0.8);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            display: none !important;
         }
 
         .custom-cursor-dot {
-            width: 5px;
-            height: 5px;
-            background: var(--accent);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 10000;
-            transform: translate(-50%, -50%);
-            transition: all 0.12s ease-out;
-            opacity: 0;
-            box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+            display: none !important;
         }
 
-        .custom-cursor-dot.active {
-            opacity: 0.9;
-        }
-
-        /* Hide default cursor on interactive elements */
+        /* Use regular cursor on all elements */
         a, button, .card, .stat, .testimonial, .faq-question {
-            cursor: none;
+            cursor: pointer;
         }
 
         /* Image Reveal Effect */
@@ -2154,10 +2122,6 @@
 
     <!-- SCROLL PROGRESS INDICATOR -->
     <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Прогресс прокрутки страницы" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-
-    <!-- CUSTOM CURSOR -->
-    <div class="custom-cursor" id="customCursor"></div>
-    <div class="custom-cursor-dot" id="customCursorDot"></div>
 
     <!-- URGENCY BANNER -->
     <div class="urgency-banner">
@@ -2996,47 +2960,8 @@
             });
         }
 
-        // ========== CUSTOM CURSOR ==========
-        const customCursor = document.getElementById('customCursor');
-        const customCursorDot = document.getElementById('customCursorDot');
-        let cursorX = 0, cursorY = 0, cursorDotX = 0, cursorDotY = 0;
-
-        // Only enable on desktop
-        const isMobile = window.matchMedia('(max-width: 768px)').matches;
-
-        if (!isMobile) {
-            document.addEventListener('mousemove', (e) => {
-                cursorX = e.clientX;
-                cursorY = e.clientY;
-            });
-
-            // Smooth cursor animation
-            function animateCursor() {
-                cursorDotX += (cursorX - cursorDotX) * 0.2;
-                cursorDotY += (cursorY - cursorDotY) * 0.2;
-
-                customCursor.style.left = cursorX + 'px';
-                customCursor.style.top = cursorY + 'px';
-                customCursorDot.style.left = cursorDotX + 'px';
-                customCursorDot.style.top = cursorDotY + 'px';
-
-                requestAnimationFrame(animateCursor);
-            }
-            animateCursor();
-
-            // Activate cursor
-            document.addEventListener('mouseenter', () => {
-                customCursor.classList.add('active');
-                customCursorDot.classList.add('active');
-            });
-
-            // Hover effects
-            const interactiveElements = document.querySelectorAll('a, button, .card, .stat, .testimonial, .faq-question, .btn');
-            interactiveElements.forEach(el => {
-                el.addEventListener('mouseenter', () => customCursor.classList.add('hover'));
-                el.addEventListener('mouseleave', () => customCursor.classList.remove('hover'));
-            });
-        }
+        // ========== CUSTOM CURSOR - DISABLED ==========
+        // Custom cursor disabled - using regular mouse cursor
 
         // ========== SCROLL PROGRESS INDICATOR ==========
         const scrollProgress = document.getElementById('scrollProgress');
@@ -3202,6 +3127,7 @@
         // Sticky CTA visibility on scroll
         const stickyCta = document.getElementById('stickyCta');
         const hero = document.querySelector('.hero');
+        const joinSection = document.getElementById('join');
         let heroHeight = hero ? hero.offsetHeight : 800;
 
         function handleStickyCtaVisibility() {
@@ -3209,13 +3135,25 @@
             const viewportHeight = window.innerHeight;
             const documentHeight = document.documentElement.scrollHeight;
             const distanceFromBottom = documentHeight - (scrollPosition + viewportHeight);
+            const isMobile = window.innerWidth <= 768;
+
+            // Check if section 11
+            let joinSectionInView = false;
+            if (joinSection) {
+                const joinRect = joinSection.getBoundingClientRect();
+                joinSectionInView = joinRect.top < viewportHeight && joinRect.bottom > 0;
+            }
 
             // Show sticky CTA after scrolling past hero
-            // Hide when near footer (last 800px)
-            if (scrollPosition > heroHeight && distanceFromBottom > 800) {
+            // Hide when near footer (last 800px) or when section 11 is visible on mobile
+            if (scrollPosition > heroHeight && distanceFromBottom > 800 && !joinSectionInView) {
                 stickyCta.classList.add('visible');
+                stickyCta.classList.remove('hide-on-section');
             } else {
                 stickyCta.classList.remove('visible');
+                if (joinSectionInView) {
+                    stickyCta.classList.add('hide-on-section');
+                }
             }
         }
 
