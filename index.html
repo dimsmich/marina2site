@@ -45,8 +45,9 @@
             /* Neutrals - Classic Palette */
             --text: #1a1a1a; /* Primary text */
             --text-dark: #1a1a1a;
-            --text-gray: #4a4a4a;
+            --text-blue: #011E41;
             --text-light: #7a7a7a;
+            --text-white: #FFFFFF;
             --bg-white: #fdfdfb;
             --bg-light: #f5f5f0;
             --bg-lighter: #eeeee8;
@@ -91,7 +92,7 @@
             z-index: 9999;
             padding: 1em 1.5em;
             background: var(--primary);
-            color: #ffffff;
+            color: var(--text-white);
             text-decoration: none;
             font-weight: 700;
             border-radius: 8px;
@@ -378,7 +379,7 @@
 
         /* CRITICAL FIX: Hero CTA - White button for maximum visibility */
         .hero .btn-accent {
-            background: linear-gradient(135deg, #ffffff 0%, #f9f7f3 100%);
+            background: linear-gradient(135deg, var(--text-white) 0%, #f9f7f3 100%);
             color: #1a2f5a;
             font-weight: 900;
             font-size: 19px;
@@ -394,7 +395,7 @@
         }
 
         .hero .btn-accent:hover {
-            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            background: linear-gradient(135deg, var(--text-white) 0%, var(--text-white) 100%);
             color: #0f1d3a;
             border-color: #e8c66f;
             transform: translateY(-6px) scale(1.05);
@@ -422,7 +423,7 @@
             display: inline-block;
             margin-top: 24px;
             font-size: 18px;
-            color: #ffffff;
+            color: var(--text-white);
             font-weight: 700;
             text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
             letter-spacing: 0.03em;
@@ -617,7 +618,7 @@
         /* WCAG FIX: Hero subtitle with better contrast */
         .hero-subtitle {
             font-size: clamp(18px, 2.5vw, 24px);
-            color: #ffffff;
+            color: var(--text-white);
             font-weight: 500;
             margin-bottom: var(--s-8);
             line-height: 1.7;
@@ -1104,7 +1105,7 @@
             font-style: italic;
             font-size: 17px;
             line-height: 1.8;
-            color: var(--text-gray);
+            color: var(--text-blue);
             position: relative;
             z-index: 1;
         }
@@ -1146,7 +1147,7 @@
             width: 20px;
             height: 20px;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: #ffffff;
+            color: var(--text-white);
             border-radius: 50%;
             font-size: 12px;
             font-weight: 900;
@@ -1310,7 +1311,7 @@
             font-family: var(--font-sans);
             font-size: 13px;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--text-white);
             text-transform: uppercase;
             letter-spacing: 0.08em;
             text-shadow:
@@ -1435,7 +1436,7 @@
             font-family: var(--font-sans);
             font-size: 14px;
             font-weight: 700;
-            color: #ffffff;
+            color: var(--text-white);
             text-shadow:
                 0 2px 12px rgba(0, 0, 0, 0.9),
                 0 0 24px rgba(0, 0, 0, 0.7),
@@ -1673,7 +1674,7 @@
 
         /* FAQ Enhancement - Matching Reference File */
         .faq-item {
-            background: #ffffff;
+            background: var(--text-white);
             border-radius: 12px;
             margin-bottom: 0;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -1693,7 +1694,7 @@
             justify-content: space-between;
             align-items: center;
             user-select: none;
-            color: #011E41;
+            color: var(--text-blue);
             transition: background 0.3s ease;
         }
 
@@ -2276,8 +2277,8 @@
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 1;"></div>
         <span class="feedback-section-badge">1</span>
         <div class="container max-w-prose" style="position: relative; z-index: 2;">
-            <h1 style="font-family: 'Century Gothic', sans-serif; font-size: 4em; font-weight: 700; color: #ffffff; margin-bottom: var(--s-3); line-height: 1.2; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">Sacred Lab</h1>
-            <p style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; font-weight: 400; color: #ffffff; margin: 0; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">Проживание Рун</p>
+            <h1 style="font-family: 'Century Gothic', sans-serif; font-size: 4em; font-weight: 700; color: var(--text-white); margin-bottom: var(--s-3); line-height: 1.2; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">Sacred Lab</h1>
+            <p style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; font-weight: 400; color: var(--text-white); margin: 0; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);">Проживание Рун</p>
         </div>
     </section>
 
@@ -2285,28 +2286,28 @@
     <section class="section section-gray" style="font-family: 'Century Gothic', sans-serif;">
         <span class="feedback-section-badge">2</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Когда-то эти знания были доступны лишь избранным.</h2>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-blue);">Когда-то эти знания были доступны лишь избранным.</h2>
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 Жрецы, ордены и мистики использовали руны как инструмент управления энергией, сознанием и судьбой.
             </p>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 Сегодня эти символы возвращаются, и ты можешь прикоснуться к этой силе: сознанно, безопасно и научно выверено.
             </p>
-            <p class="text-center" style="margin-top: 40px; font-family: 'Century Gothic', sans-serif;">
+            <p class="text-center" style="margin-top: 40px; font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 <strong>Сакральная Лаборатория</strong> - это пространство, где символ становится алгоритмом, где каждая руна - не знак, а состояние.
             </p>
-            <p class="text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <p class="text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 Проживая её, ты перестраиваешь свой внутренний код: мышление, реакции, решения, судьбу.
             </p>
         </div>
     </section>
 
      <!-- HOW RUNES WORK - INTRO -->
-     <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background-color: #1A2F5A; color: #ffffff;">
+     <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background-color: #1A2F5A; color: var(--text-white);">
         <span class="feedback-section-badge">3</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #ffffff;">Как работает система</h2>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-6); color: #ffffff;">
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-white);">Как работает система</h2>
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-6); color: var(--text-white);">
                 Руны действуют НЕ на уровне веры.<br>
                 Они запускают <strong>процессы нейропластичности</strong>, синхронизируют мышление, тело и волю. Это древняя нейротехнология, встроенная в человеческое сознание.
             </p>
@@ -2314,28 +2315,28 @@
     </section>
 
     <!-- HOW RUNES WORK - DETAILS -->
-    <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background-color: #ffffff;">
+    <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background-color: var(--text-white);">
         <span class="feedback-section-badge">3A</span>
         <div class="container max-w-prose">
             <div style="margin-top: var(--s-8);">
-                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Сознание.</h3>
-                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #111111;">
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue); font-size: 1.5em; margin-bottom: var(--s-2);">Сознание.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: var(--text-blue);">
                     Новые нейронные связи, новая архитектура мышления.<br>
                     Ты начинаешь видеть себя и реальность иначе.
                 </p>
 
-                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Энергия.</h3>
-                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #111111;">
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue); font-size: 1.5em; margin-bottom: var(--s-2);">Энергия.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: var(--text-blue);">
                     Внутренние фрагменты собираются в целое: возвращается сила, появляется поток, снижается тревожность.
                 </p>
 
-                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Тело.</h3>
-                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #111111;">
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue); font-size: 1.5em; margin-bottom: var(--s-2);">Тело.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: var(--text-blue);">
                     Психика и биохимия выравниваются. Меняется походка, осанка, дыхание, а значит и твое поведение, твои стратегии и реакции.
                 </p>
 
-                <h3 style="font-family: 'Century Gothic', sans-serif; color: #9B552B; font-size: 1.5em; margin-bottom: var(--s-2);">Жизнь.</h3>
-                <p style="font-family: 'Century Gothic', sans-serif; color: #111111;">
+                <h3 style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue); font-size: 1.5em; margin-bottom: var(--s-2);">Жизнь.</h3>
+                <p style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                     Жизненные сценарии перестраиваются. Ты больше не идёшь по кругу, ты создаёшь направление.
                 </p>
             </div>
@@ -2346,16 +2347,16 @@
     <section class="section section-gray" style="font-family: 'Century Gothic', sans-serif; background: #1A2F5A;">
         <span class="feedback-section-badge">4</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #FFFFFF;">Почему именно руны</h2>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-white);">Почему именно руны</h2>
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-white);">
                 Потому что это не религия и не мифология.<br>
                 Это язык взаимодействия человека с законами бытия.
             </p>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-white);">
                 Каждая руна отражает этап эволюции сознания:<br>
                 от первичной воли до просветлённой ясности.
             </p>
-            <p class="text-center" style="margin-top: 40px; font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
+            <p class="text-center" style="margin-top: 40px; font-family: 'Century Gothic', sans-serif; color: var(--text-white);">
                 <strong>Руны - не о гадании.</strong><br>
                 Руны о том, <strong>кем ты становишься, кем ты выбираешь быть.</strong>
             </p>
@@ -2366,14 +2367,14 @@
     <section class="section section-light" style="font-family: 'Century Gothic', sans-serif;">
         <span class="feedback-section-badge">5</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Для кого эта Лаборатория</h2>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-blue);">Для кого эта Лаборатория</h2>
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 Для тех, кто <strong>уже устал от бесконечных практик и самоанализа.</strong>
             </p>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 Для тех, кто ищет систему, а не очередную "медитацию".
             </p>
-            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif;">
+            <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 Для тех, кто готов к честной внутренней алхимии,<br>
                 где знание становится действием и результатом.
             </p>
@@ -2381,10 +2382,10 @@
     </section>
 
     <!-- INSTRUCTOR (Moved before testimonials) -->
-    <section id="instructor" class="section section-light">
+    <section id="instructor" class="section section-gray">
         <span class="feedback-section-badge">6</span>
         <div class="container">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">О ведущей</h2>
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-blue);">О ведущей</h2>
 
             <div class="instructor-grid">
                 <div class="instructor-image">
@@ -2392,34 +2393,34 @@
                 </div>
 
                 <div>
-                    <h3>Марина Димшиц</h3>
-                    <p style="color: var(--text-gray); font-size: 18px; margin-bottom: 24px;">
+                    <h3 style="color: var(--text-blue);">Марина Димшиц</h3>
+                    <p style="color: var(--text-blue); font-size: 18px; margin-bottom: 24px;">
                         <strong>Health Coach, исследователь сознания</strong>
                     </p>
 
-                    <p>Выпускница программ <strong>Medical School, Yale</strong> и <strong>NYU</strong>, соединяет нейронауку, психологию и сакральные традиции.</p>
+                    <p style="color: var(--text-blue);">Выпускница программ <strong>Medical School, Yale</strong> и <strong>NYU</strong>, соединяет нейронауку, психологию и сакральные традиции.</p>
 
-                    <p>Создатель авторских практик, прошедших более 1000 человек в 20+ странах. Её методика основана на точности науки и глубине символа.</p>
+                    <p style="color: var(--text-blue);">Создатель авторских практик, прошедших более 1000 человек в 20+ странах. Её методика основана на точности науки и глубине символа.</p>
 
-                    <div class="quote">
+                    <div class="quote" style="color: var(--text-blue);">
                         «Руны - это не магия. Это древняя нейросеть. Когда ты их проживаешь, твой мозг и тело переписывают старые алгоритмы жизни.»
                     </div>
 
                     <!-- Credential Badges - Horizontal -->
                     <div class="flex flex-wrap gap-4 mb-6">
-                        <div class="badge">
+                        <div class="badge" style="color: var(--text-blue);">
                             <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
                             Harvard Medical School
                         </div>
-                        <div class="badge">
+                        <div class="badge" style="color: var(--text-blue);">
                             <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path></svg>
                             Yale University
                         </div>
-                        <div class="badge">
+                        <div class="badge" style="color: var(--text-blue);">
                             <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
                             1,000+ Clients
                         </div>
-                        <div class="badge">
+                        <div class="badge" style="color: var(--text-blue);">
                             <svg class="w-5 h-5 text-copper" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                             6+ Years Experience
                         </div>
@@ -2433,31 +2434,31 @@
     <section class="section section-light" style="font-family: 'Century Gothic', sans-serif; background: #1A2F5A;">
         <span class="feedback-section-badge">7</span>
         <div class="container max-w-prose">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #FFFFFF;">Программа</h2>
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-white);">Программа</h2>
 
             <div style="margin-top: var(--s-8);">
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: var(--text-white);">
                     • 24 архетипических состояния, по одной Руне в неделю.
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: var(--text-white);">
                     • Голосовые медитации и нейропрактики для тела и сознания.
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: var(--text-white);">
                     • Минимум времени, максимум трансформации: всего <strong>15 минут в неделю.</strong>
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: #FFFFFF;">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-4); color: var(--text-white);">
                     • Поддержка, сопровождение и глубинная структура процесса.
                 </p>
-                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-6); color: #FFFFFF;">
+                <p class="text-large" style="font-family: 'Century Gothic', sans-serif; margin-bottom: var(--s-6); color: var(--text-white);">
                     • Изменение восприятия себя, энергии и реальности.
                 </p>
 
                 <h3 style="color: #9B552B; font-size: 1.8em; margin-top: var(--s-8); margin-bottom: var(--s-3); font-family: 'Century Gothic', sans-serif; text-align: center;">Результат</h3>
-                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: #FFFFFF;">
+                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; color: var(--text-white);">
                     Ты больше не ищешь ответы, ты становишься ими.<br>
                     Ты перестаёшь «работать над собой», ты начинаешь <strong>жить собой.</strong>
                 </p>
-                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; margin-top: var(--s-3); color: #FFFFFF;">
+                <p class="text-large text-center" style="font-family: 'Century Gothic', sans-serif; margin-top: var(--s-3); color: var(--text-white);">
                     Ты обретаешь внутренний стержень, уверенность и ясность, которую не забирают внешние обстоятельства.
                 </p>
             </div>
@@ -2468,7 +2469,7 @@
     <section id="testimonials" class="section section-gray">
         <span class="feedback-section-badge">8</span>
         <div class="container">
-            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #111111;">Отзывы участниц</h2>
+            <h2 class="text-center" style="font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-blue);">Отзывы участниц</h2>
 
             <div class="grid grid-2" style="margin-top: 80px;">
                 <div class="testimonial">
@@ -2542,7 +2543,7 @@
     <section id="faq" class="section" style="background: #E7E6E2; padding: 120px 40px;">
         <span class="feedback-section-badge">10</span>
         <div style="max-width: 896px; margin: 0 auto; padding: 0 24px;">
-            <h2 style="font-family: 'Forum', serif; font-size: 48px; font-weight: 700; text-align: center; color: #011E41; margin-bottom: 16px; line-height: 1.2;">F.A.Q.</h2>
+            <h2 style="font-family: 'Forum', serif; font-size: 48px; font-weight: 700; text-align: center; color: var(--text-blue); margin-bottom: 16px; line-height: 1.2;">F.A.Q.</h2>
             <!-- <p style="font-family: 'Jost', sans-serif; font-size: 24px; text-align: center; color: #6b7280; margin-bottom: 48px; line-height: 1.5;">Всё, что нужно знать</p> -->
 
             <div style="display: flex; flex-direction: column; gap: 16px;">
@@ -2638,14 +2639,14 @@
     <section id="join" class="section section-accent" style="padding: var(--s-20) 0; font-family: 'Century Gothic', sans-serif; background: #f5f5f0;">
         <span class="feedback-section-badge">11</span>
         <div class="container text-center max-w-prose" style="position: relative; z-index: 1;">
-            <h2 style="margin-bottom: var(--s-8); font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: #011E41;">Готова войти в Сакральную Лабораторию?</h2>
-            <p class="text-large" style="margin-bottom: var(--s-4); max-width: 600px; margin-left: auto; margin-right: auto; font-family: 'Century Gothic', sans-serif; color: #011E41;">
+            <h2 style="margin-bottom: var(--s-8); font-family: 'Century Gothic', sans-serif; font-size: 2.5em; margin-bottom: var(--s-6); font-weight: 600; color: var(--text-blue);">Готова войти в Сакральную Лабораторию?</h2>
+            <p class="text-large" style="margin-bottom: var(--s-4); max-width: 600px; margin-left: auto; margin-right: auto; font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 Полгода, 24 руны, полный цикл и одно решение.
             </p>
-            <p style="margin-bottom: var(--s-10); font-size: 20px; opacity: 0.95; font-family: 'Century Gothic', sans-serif; color: #011E41;">
+            <p style="margin-bottom: var(--s-10); font-size: 20px; opacity: 0.95; font-family: 'Century Gothic', sans-serif; color: var(--text-blue);">
                 С этого шага начинается твоя новая жизнь.
             </p>
-            <a href="#" class="btn btn-primary btn-lg btn-magnetic btn-ripple" style="padding: var(--s-4) var(--s-10); font-size: 18px; font-family: 'Century Gothic', sans-serif; color: #011E41;" aria-label="Принять участие в программе Проживание Рун - зарегистрироваться сейчас">Принять участие</a>
+            <a href="#" class="btn btn-primary btn-lg btn-magnetic btn-ripple" style="padding: var(--s-4) var(--s-10); font-size: 18px; font-family: 'Century Gothic', sans-serif; color: var(--text-blue);" aria-label="Принять участие в программе Проживание Рун - зарегистрироваться сейчас">Принять участие</a>
         </div>
     </section>
 
@@ -2661,7 +2662,7 @@
                     <div class="numbered-item-number">01</div>
                     <div>
                         <h3>24 архетипических состояния</h3>
-                        <p style="color: var(--text-gray);">По одной Руне в неделю</p>
+                        <p style="color: var(--text-blue);">По одной Руне в неделю</p>
                     </div>
                 </div>
 
@@ -2669,7 +2670,7 @@
                     <div class="numbered-item-number">02</div>
                     <div>
                         <h3>Голосовые медитации и нейропрактики</h3>
-                        <p style="color: var(--text-gray);">Для тела и сознания</p>
+                        <p style="color: var(--text-blue);">Для тела и сознания</p>
                     </div>
                 </div>
 
@@ -2677,7 +2678,7 @@
                     <div class="numbered-item-number">03</div>
                     <div>
                         <h3>Минимум времени, максимум трансформации</h3>
-                        <p style="color: var(--text-gray);">Всего 15 минут в неделю</p>
+                        <p style="color: var(--text-blue);">Всего 15 минут в неделю</p>
                     </div>
                 </div>
 
@@ -2685,7 +2686,7 @@
                     <div class="numbered-item-number">04</div>
                     <div>
                         <h3>Поддержка и сопровождение</h3>
-                        <p style="color: var(--text-gray);">Глубинная структура процесса</p>
+                        <p style="color: var(--text-blue);">Глубинная структура процесса</p>
                     </div>
                 </div>
 
@@ -2693,7 +2694,7 @@
                     <div class="numbered-item-number">05</div>
                     <div>
                         <h3>Изменение восприятия</h3>
-                        <p style="color: var(--text-gray);">Себя, энергии и реальности</p>
+                        <p style="color: var(--text-blue);">Себя, энергии и реальности</p>
                     </div>
                 </div>
             </div>
@@ -2886,7 +2887,7 @@
                 </div>
 
                 <div style="margin-top: 40px; padding: 24px; background: linear-gradient(135deg, #1a2f5a 0%, #2a4f8a 100%); border-radius: 16px;">
-                    <p style="color: #ffffff; font-weight: 700; margin: 0; font-size: 18px;">
+                    <p style="color: var(--text-white); font-weight: 700; margin: 0; font-size: 18px;">
                         Твоя единственная задача — начать. Всё остальное — наша ответственность.
                     </p>
                 </div>
@@ -2907,7 +2908,7 @@
                 <div class="pricing-card">
                     <span class="feedback-subsection-badge">13-1</span>
                     <h3 style="color: var(--primary); margin-bottom: var(--s-2);">Базовый</h3>
-                    <p style="color: var(--text-gray); margin-bottom: var(--s-4);">Самостоятельное прохождение</p>
+                    <p style="color: var(--text-blue); margin-bottom: var(--s-4);">Самостоятельное прохождение</p>
                     <div class="price">₪997</div>
                     <p style="font-size: 14px; color: var(--text-light); margin-bottom: var(--s-5);">или 6 платежей по ₪180</p>
 
@@ -2926,7 +2927,7 @@
                     <span class="feedback-subsection-badge">13-2</span>
                     <div class="vip-badge">⭐ Лучший выбор</div>
                     <h3 style="color: var(--accent); margin-bottom: var(--s-2); font-weight: 900; font-size: 28px;">VIP</h3>
-                    <p style="color: var(--text-gray); margin-bottom: var(--s-4);">С персональной поддержкой</p>
+                    <p style="color: var(--text-blue); margin-bottom: var(--s-4);">С персональной поддержкой</p>
                     <div class="price">₪2,497</div>
                     <p style="font-size: 14px; color: var(--text-light); margin-bottom: var(--s-5);">или 6 платежей по ₪430</p>
 
@@ -2943,7 +2944,7 @@
                 </div>
             </div>
 
-            <p class="text-center" style="margin-top: var(--s-8); color: var(--text-gray); font-size: 16px;">
+            <p class="text-center" style="margin-top: var(--s-8); color: var(--text-blue); font-size: 16px;">
                 💳 Безопасная оплата · 🔒 Гарантия возврата 14 дней · 🎁 Бонусные материалы при регистрации
             </p>
         </div>
@@ -3011,7 +3012,7 @@
 
     <!-- STICKY CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <a href="#join" class="btn btn-accent btn-lg" style="background: #9B552B; color: #ffffff; text-align: center;">Принять участие</a>
+        <a href="#join" class="btn btn-accent btn-lg" style="background: #9B552B; color: var(--text-white); text-align: center;">Принять участие</a>
     </div>
 
     <script>
