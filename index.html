@@ -2208,6 +2208,15 @@
                 font-family: var(--font-sans);
                 opacity: 0.6;
             }
+
+            /* Fix #join section button visibility on mobile - prevent hiding behind Safari bottom bar */
+            #join {
+                padding-bottom: calc(var(--s-20) + 100px) !important;
+            }
+
+            #join .btn {
+                margin-bottom: var(--s-8);
+            }
         }
 
         /* ============================================
