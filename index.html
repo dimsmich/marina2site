@@ -2167,6 +2167,47 @@
                 width: 28px;
                 height: 28px;
             }
+
+            /* Testimonials - Horizontal Scroll on Mobile */
+            #testimonials .grid-2 {
+                display: flex;
+                overflow-x: auto;
+                overflow-y: hidden;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                -webkit-overflow-scrolling: touch;
+                gap: var(--s-4);
+                padding: 0 var(--s-4) var(--s-4) var(--s-4);
+                margin: 0 calc(var(--s-4) * -1);
+            }
+
+            #testimonials .testimonial {
+                flex: 0 0 85%;
+                scroll-snap-align: center;
+                min-width: 85%;
+            }
+
+            /* Hide scrollbar but keep functionality */
+            #testimonials .grid-2::-webkit-scrollbar {
+                display: none;
+            }
+
+            #testimonials .grid-2 {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+
+            /* Add scroll indicator hint */
+            #testimonials .container::after {
+                content: '← Swipe →';
+                display: block;
+                text-align: center;
+                color: var(--text-light);
+                font-size: 14px;
+                margin-top: var(--s-3);
+                font-family: var(--font-sans);
+                opacity: 0.6;
+            }
         }
 
         /* ============================================
@@ -2569,7 +2610,7 @@
 
             <div class="grid grid-2" style="margin-top: 80px;">
                 <div class="testimonial">
-                    <span class="feedback-subsection-badge">3-1</span>
+                    <!-- <span class="feedback-subsection-badge">3-1</span> -->
                     <div class="testimonial-header">
                         <div class="testimonial-avatar" style="background: url('images/Runa1.PNG') center/cover, linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
                         </div>
@@ -2581,7 +2622,7 @@
                 </div>
 
                 <div class="testimonial">
-                    <span class="feedback-subsection-badge">3-2</span>
+                    <!-- <span class="feedback-subsection-badge">3-2</span> -->
                     <div class="testimonial-header">
                         <div class="testimonial-avatar" style="background: url('images/Runa2.PNG') center/cover, linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">
                         </div>
@@ -2592,7 +2633,7 @@
                 </div>
 
                 <div class="testimonial">
-                    <span class="feedback-subsection-badge">3-3</span>
+                    <!-- <span class="feedback-subsection-badge">3-3</span> -->
                     <div class="testimonial-header">
                         <div class="testimonial-avatar" style="background: url('images/Runa3.PNG') center/cover, linear-gradient(135deg, #10b981 0%, #14b8a6 100%);">
                         </div>
@@ -2604,7 +2645,7 @@
                 </div>
 
                 <div class="testimonial">
-                    <span class="feedback-subsection-badge">3-4</span>
+                    <!-- <span class="feedback-subsection-badge">3-4</span> -->
                     <div class="testimonial-header">
                         <div class="testimonial-avatar" style="background: url('images/Runa4.PNG') center/cover, linear-gradient(135deg, #f59e0b 0%, #f97316 100%);">
                         </div>
@@ -2618,7 +2659,7 @@
                 </div>
 
                 <div class="testimonial">
-                    <span class="feedback-subsection-badge">3-1</span>
+                    <!-- <span class="feedback-subsection-badge">3-1</span> -->
                     <div class="testimonial-header">
                         <div class="testimonial-avatar" style="background: url('images/Runa5.PNG') center/cover, linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
                         </div>
@@ -2630,7 +2671,7 @@
                 </div>
 
                 <div class="testimonial">
-                    <span class="feedback-subsection-badge">3-1</span>
+                    <!-- <span class="feedback-subsection-badge">3-1</span> -->
                     <div class="testimonial-header">
                         <div class="testimonial-avatar" style="background: url('images/Runa6.PNG') center/cover, linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);">
                         </div>
